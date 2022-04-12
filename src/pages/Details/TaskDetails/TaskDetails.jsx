@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 // Services
 import { getOne } from '../../../services/taskService'
@@ -24,6 +24,11 @@ const TaskDetails = (props) => {
         <div className="task-details">
           <h1>{task.title}</h1>
           <p>{task.description}</p>
+          {task.profile_id === props.user.id ?
+          <Link to={`/tasks/${task.id}/edit`} ><button>Edit</button></Link>
+          :
+          <></>
+          }
         </div>
       </section>
     </>

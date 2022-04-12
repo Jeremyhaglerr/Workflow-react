@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 // Services
 import { getOne } from '../../../services/issueService'
@@ -25,6 +25,11 @@ const IssueDetails = (props) => {
           <h1>{issue.title}</h1>
           <p>{issue.error}</p>
           <p>{issue.description}</p>
+          {issue.profile_id === props.user.id ?
+          <Link to={`/issues/${issue.id}/edit`} ><button>Edit</button></Link>
+          :
+          <></>
+          }
         </div>
       </section>
     </>
