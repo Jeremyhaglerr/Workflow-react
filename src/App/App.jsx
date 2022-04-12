@@ -59,6 +59,18 @@ const App = () => {
     )))
   }
 
+  const deleteTask = async (id) => {
+    await taskService.deleteOne(id)
+    setTasks(tasks.filter(task => task.id !== parseInt(id)))
+    navigate("/tasks")
+  }
+
+  const deleteIssue = async (id) => {
+    await issueService.deleteOne(id)
+    setIssues(issues.filter(issue => issue.id !== parseInt(id)))
+    navigate('/issues')
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await taskService.getAll()
@@ -101,7 +113,7 @@ const App = () => {
         />
         <Route
           path="/tasks/:id"
-          element={user ? <TaskDetails user={user} /> : <Navigate to="/login" />}
+          element={user ? <TaskDetails user={user} deleteTask={deleteTask} /> : <Navigate to="/login" />}
         />
         <Route
           path="/tasks/:id/edit"
@@ -117,7 +129,7 @@ const App = () => {
         />
         <Route
           path="/issues/:id"
-          element={user ? <IssueDetails user={user} /> : <Navigate to="/login" />}
+          element={user ? <IssueDetails user={user} deleteIssue={deleteIssue} /> : <Navigate to="/login" />}
         />
         <Route
           path="/issues/:id/edit"
