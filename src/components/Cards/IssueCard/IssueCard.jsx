@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const IssueCard = (props) => {
 
   return (
-    <Link to={`/tasks/${props.issue.id}`} className="card">
+    <Link to={`/issues/${props.issue.id}`} className="card">
       <div className="card-content">
         <h2 className="card-title">{props.issue.name}</h2>
         <p>{props.issue.error}</p>
