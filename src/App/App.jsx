@@ -45,6 +45,20 @@ const App = () => {
     setIssues([...issues, issue])
   }
 
+  const updateTask = async (taskData) => {
+    const updatedTask = await taskService.update(taskData)
+    setTasks(tasks.map((task) => (
+      task.id === updatedTask.id ? updatedTask : task
+    )))
+  }
+
+  const updateIssue = async (issueData) => {
+    const updatedIssue = await issueService.update(issueData)
+    setIssues(issues.map((issue) => (
+      issue.id === updatedIssue.id ? updatedIssue : issue
+    )))
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await taskService.getAll()
@@ -87,7 +101,11 @@ const App = () => {
         />
         <Route
           path="/tasks/:id"
-          element={user ? <TaskDetails /> : <Navigate to="/login" />}
+          element={user ? <TaskDetails user={user} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/tasks/:id/edit"
+          element={user ? <TaskForm updateTask={updateTask} /> : <Navigate to="/login" />}
         />
         <Route
           path="/issues"
@@ -99,7 +117,11 @@ const App = () => {
         />
         <Route
           path="/issues/:id"
-          element={user ? <IssueDetails /> : <Navigate to="/login" />}
+          element={user ? <IssueDetails user={user} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/issues/:id/edit"
+          element={user ? <IssueForm updateIssue={updateIssue} /> : <Navigate to="/login" />}
         />
       </Routes>
     </>

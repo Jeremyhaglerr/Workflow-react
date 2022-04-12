@@ -35,3 +35,19 @@ export const getAll = async () => {
     throw error
   }
 }
+
+export const update = async (issue) => {
+  try {
+    const res = await fetch(`${BASE_URL}${issue.id}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+      body: JSON.stringify(issue)
+    })
+    return await res.json()
+  } catch (error) {
+    throw error
+  }
+}
