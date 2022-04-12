@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import '../../../styles/Form.css'
 
 // Services
 import { getOne } from '../../../services/taskService'
@@ -48,6 +47,7 @@ const TaskForm = (props) => {
       <section className="form-container">
         <form onSubmit={handleSubmit}>
           <TaskInput form={form} handleChange={handleChange} />
+          <br />
           <button type="submit" className="btn submit">Submit!</button>
         </form>
       </section>

@@ -1,38 +1,82 @@
-.App {
+
+
+.page-header {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.form-container {
+  width: 80vw;
+  height: 60vh;
+  padding: 20px;
+  margin: 0 auto;
+  border: .5px solid black;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.form-input {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.form-input label {
+  background-color: lightgrey;
+  border: .5px solid black;
+  min-width: 14vw;
+  height: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-input input {
+  width: 50vw;
+  height: 40px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border-bottom: 0.5px solid black;
+  padding: 10px 30px;
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-logo {
+  justify-self: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+}
+
+.add-btn {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.add-btn button {
+  height: 40px;
+  width: 175px;
+  background-color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.add-btn button:hover {
+  background-color: grey;
+  color: white
+}
+
+
+
+.card-content {
+  background-color: white;
+  border-radius: 15px;
+  width: 60vw;
+  padding: 15px;
+  margin: 15px auto;
 }
