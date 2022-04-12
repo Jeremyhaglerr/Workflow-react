@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 //Components
 import Login from '../pages/Login/Login'
 import Landing from '../pages/Landing/Landing'
 import NavBar from '../components/NavBar/NavBar'
+import TaskList from '../pages/Lists/TaskList/TaskList'
 import TaskForm from '../pages/Forms/TaskForm/TaskForm'
+import IssueList from '../pages/Lists/IssueList/IssueList'
 import IssueForm from '../pages/Forms/IssueForm/IssueForm'
 import Signup from '../pages/Signup/Signup'
 
@@ -41,6 +43,22 @@ const App = () => {
     setIssues([...issues, issue])
   }
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await taskService.getAll()
+      setTasks(data)
+    }
+    fetchData()
+  }, [])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await issueService.getAll()
+      setIssues(data)
+    }
+    fetchData()
+  }, [])
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -58,8 +76,16 @@ const App = () => {
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
         <Route
+          path="/tasks"
+          element={user ? <TaskList tasks={tasks} /> : <Navigate to="/login" />}
+        />
+        <Route
           path="/tasks/new"
           element={user ? <TaskForm addTask={addTask} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/issues"
+          element={user ? <IssueList issues={issues} /> : <Navigate to="/login" />}
         />
         <Route
           path="/issues/new"
