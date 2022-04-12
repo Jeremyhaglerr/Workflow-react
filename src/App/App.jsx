@@ -7,8 +7,10 @@ import Landing from '../pages/Landing/Landing'
 import NavBar from '../components/NavBar/NavBar'
 import TaskList from '../pages/Lists/TaskList/TaskList'
 import TaskForm from '../pages/Forms/TaskForm/TaskForm'
+import TaskDetails from '../pages/Details/TaskDetails/TaskDetails'
 import IssueList from '../pages/Lists/IssueList/IssueList'
 import IssueForm from '../pages/Forms/IssueForm/IssueForm'
+import IssueDetails from '../pages/Details/IssueDetails/IssueDetails'
 import Signup from '../pages/Signup/Signup'
 
 //Services
@@ -84,12 +86,20 @@ const App = () => {
           element={user ? <TaskForm addTask={addTask} /> : <Navigate to="/login" />}
         />
         <Route
+          path="/tasks/:id"
+          element={user ? <TaskDetails /> : <Navigate to="/login" />}
+        />
+        <Route
           path="/issues"
           element={user ? <IssueList issues={issues} /> : <Navigate to="/login" />}
         />
         <Route
           path="/issues/new"
           element={user ? <IssueForm addIssue={addIssue} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/issues/:id"
+          element={user ? <IssueDetails /> : <Navigate to="/login" />}
         />
       </Routes>
     </>
