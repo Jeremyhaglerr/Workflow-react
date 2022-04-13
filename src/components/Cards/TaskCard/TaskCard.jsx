@@ -6,7 +6,7 @@ const TaskCard = (props) => {
     <Link to={`/tasks/${props.task.id}`} className="card">
       <div className="card-content">
         <h2 className="card-title">{props.task.title}</h2>
-        <p><small>{props.task.description}</small></p>
+        <p><small>{props.task.project}</small></p>
       </div>
     </Link>
   )
