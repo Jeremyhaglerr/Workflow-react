@@ -38,7 +38,7 @@ const TaskForm = (props) => {
 
   return (
     <>
-      <section className="form-container">
+      <section className="container">
         <div className="page-header">
           {id
             ? <h1>Edit Task</h1>

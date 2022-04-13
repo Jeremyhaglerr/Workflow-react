@@ -90,11 +90,11 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} />
       <Routes>
       <Route
           path='/'
-          element={user ? <Profile user={user} tasks={tasks} issues={issues} /> : <Navigate to='/login'/>}
+          element={user ? <Profile user={user} tasks={tasks} issues={issues} handleLogout={handleLogout}  /> : <Navigate to='/login'/>}
         />
         <Route
           path="/signup"

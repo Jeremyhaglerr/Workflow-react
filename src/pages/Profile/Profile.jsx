@@ -8,10 +8,13 @@ const Profile = (props) => {
 
   return (
     <>
-    <section className="page-header">
+      <div className="logout">
+        <Link to="" onClick={props.handleLogout}><img src="logout.png" alt="log out" /></Link>
+      </div>
+      <section className="page-header">
         <h1>My Tasks</h1>
         <div className='add-btn' >
-        <Link to='/tasks/new'><img src="add-btn.png" alt="add task" /></Link>
+          <Link to='/tasks/new'><img src="add-btn.png" alt="add task" /></Link>
         </div>
       </section>
       <section className="card-container">
@@ -25,7 +28,7 @@ const Profile = (props) => {
       <section className="page-header">
         <h1>My Issues</h1>
         <div className='add-btn' >
-        <Link to='/issues/new'><img src="add-btn.png"  alt="add issue" /></Link>
+          <Link to='/issues/new'><img src="add-btn.png" alt="add issue" /></Link>
         </div>
       </section>
       <section className="card-container">
