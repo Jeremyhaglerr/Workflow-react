@@ -6,12 +6,12 @@ const NavBar = (props) => {
       {props.user ?
         <nav>
           <div className='nav-logo' >
-            <img src="https://cdn-icons-png.flaticon.com/512/2593/2593065.png" height='48' alt="logo" />
+            <img src="logo.png" height='72' alt="logo" />
           </div>
           <div className='nav-links' >
             <Link to="/tasks">All Tasks</Link>
             <Link to="/issues" >All Issues</Link>
-            <Link to="/" >Profile</Link>
+            <Link to="/" ><img src="profile.png"  alt="profile" /></Link>
           </div>
         </nav>
         :

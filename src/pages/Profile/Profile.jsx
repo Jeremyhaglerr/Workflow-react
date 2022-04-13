@@ -28,7 +28,7 @@ const Profile = (props) => {
       <section className="page-header">
         <h1>My Issues</h1>
         <div className='add-btn' >
-          <Link to='/issues/new'><img src="add-btn.png" alt="add issue" /></Link>
+          <Link to='/issues/new'><img src="add-btn-2.png" alt="add issue" /></Link>
         </div>
       </section>
       <section className="card-container">
