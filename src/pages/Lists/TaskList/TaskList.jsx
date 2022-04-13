@@ -9,9 +9,6 @@ const TaskList = (props) => {
       <section className="page-header">
         <h1>Task List</h1>
       </section>
-      <div className='add-btn' >
-        <Link to='/tasks/new'><button >Add Task</button></Link>
-        </div>
       <section className="card-container">
         {props.tasks.map((task) => (
           <TaskCard

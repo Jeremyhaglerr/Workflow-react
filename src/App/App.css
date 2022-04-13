@@ -1,8 +1,17 @@
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(28, 28, 220);
+}
 
 .page-header {
   margin: 0 auto;
   width: fit-content;
+  height: 80px;
 }
 
 .form-container {
@@ -54,29 +63,34 @@ nav {
 
 .add-btn {
   width: fit-content;
-  margin: 0 auto;
+  position:relative ;
+  bottom: 85px;
+  left: 180px;
 }
 
-.add-btn button {
-  height: 40px;
-  width: 175px;
+.add-btn img {
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  width: 64px;
+  transition: width .4s
+}
+
+.add-btn img:hover {
+  width: 72px
+}
+
+.card {
   background-color: white;
   border-radius: 15px;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.add-btn button:hover {
-  background-color: grey;
-  color: white
-}
-
-
-
-.card-content {
-  background-color: white;
-  border-radius: 15px;
-  width: 60vw;
+  width: 40vw;
   padding: 15px;
   margin: 15px auto;
+  text-align: center;
+ 
+  transition: padding .4s;
+}
+
+.card:hover {
+  padding: 30px;
 }

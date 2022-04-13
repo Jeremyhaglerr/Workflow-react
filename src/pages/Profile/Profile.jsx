@@ -1,5 +1,6 @@
 import TaskCard from "../../components/Cards/TaskCard/TaskCard";
 import IssueCard from '../../components/Cards/IssueCard/IssueCard'
+import { Link } from 'react-router-dom'
 
 const Profile = (props) => {
   const myTasks = props.tasks.filter(task => task.profile_id === props.user.id)
@@ -9,6 +10,9 @@ const Profile = (props) => {
     <>
     <section className="page-header">
         <h1>My Tasks</h1>
+        <div className='add-btn' >
+        <Link to='/tasks/new'><img src="add-btn.png" alt="add task" /></Link>
+        </div>
       </section>
       <section className="card-container">
         {myTasks?.map((task) => (
@@ -20,6 +24,9 @@ const Profile = (props) => {
       </section>
       <section className="page-header">
         <h1>My Issues</h1>
+        <div className='add-btn' >
+        <Link to='/issues/new'><img src="add-btn.png"  alt="add issue" /></Link>
+        </div>
       </section>
       <section className="card-container">
         {myIssues?.map((issue) => (

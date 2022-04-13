@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 const TaskCard = (props) => {
 
   return (
-    <Link to={`/tasks/${props.task.id}`} className="card">
-      <div className="card-content">
+    <div className="card">
+      <Link to={`/tasks/${props.task.id}`}>
         <h2 className="card-title">{props.task.title}</h2>
         <p><small>{props.task.project}</small></p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 
