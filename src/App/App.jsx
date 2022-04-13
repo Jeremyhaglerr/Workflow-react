@@ -4,8 +4,8 @@ import './App.css'
 
 //Components
 import Login from '../pages/Login/Login'
-import Landing from '../pages/Landing/Landing'
 import NavBar from '../components/NavBar/NavBar'
+import Profile from '../pages/Profile/Profile'
 import TaskList from '../pages/Lists/TaskList/TaskList'
 import TaskForm from '../pages/Forms/TaskForm/TaskForm'
 import TaskDetails from '../pages/Details/TaskDetails/TaskDetails'
@@ -94,7 +94,7 @@ const App = () => {
       <Routes>
       <Route
           path='/'
-          element={user ? <Landing user={user} /> : <Navigate to='/login'/>}
+          element={user ? <Profile user={user} tasks={tasks} issues={issues} /> : <Navigate to='/login'/>}
         />
         <Route
           path="/signup"
