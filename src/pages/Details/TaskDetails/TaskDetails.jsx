@@ -20,15 +20,15 @@ const TaskDetails = (props) => {
 
   return (
     <>
-      <section className="task-container">
+      <section className="container">
         <div className="task-details">
           <h1>{task.title}</h1>
-          <p>{task.project}</p>
-          <p>{task.description}</p>
+          <p><span>Project: </span>{task.project}</p>
+          <p><span>Description: </span>{task.description}</p>
           {task.profile_id === props.user.id ?
           <>
-          <Link to={`/tasks/${task.id}/edit`} ><button>Edit</button></Link>
-          <button onClick={() => props.deleteTask(task.id)} >Delete</button>
+          <Link to={`/tasks/${task.id}/edit`} ><button className='btn' >Edit</button></Link>
+          <button className='btn delete'  onClick={() => props.deleteTask(task.id)} >Delete</button>
           </>
           :
           <></>
