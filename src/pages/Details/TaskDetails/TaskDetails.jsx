@@ -23,6 +23,7 @@ const TaskDetails = (props) => {
       <section className="task-container">
         <div className="task-details">
           <h1>{task.title}</h1>
+          <p>{task.project}</p>
           <p>{task.description}</p>
           {task.profile_id === props.user.id ?
           <>

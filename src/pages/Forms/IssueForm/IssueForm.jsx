@@ -28,6 +28,7 @@ const TaskForm = (props) => {
       setForm({
         id: data.issue.id,
         title: data.issue.title,
+        project: data.issue.project,
         error: data.issue.error,
         description: data.issue.description
       })

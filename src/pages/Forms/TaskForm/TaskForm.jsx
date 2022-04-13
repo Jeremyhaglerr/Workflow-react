@@ -27,6 +27,7 @@ const TaskForm = (props) => {
       const data = await getOne(id)
       setForm({
         id: data.task.id,
+        project: data.task.project,
         title: data.task.title,
         description: data.task.description
       })

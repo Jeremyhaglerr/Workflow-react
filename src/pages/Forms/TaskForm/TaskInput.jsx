@@ -10,6 +10,14 @@ const TaskInput = ({ form, handleChange }) => {
     </div>
       <br />
       <div className="form-input" >
+      <label htmlFor="project">Project</label>
+      <input
+        value={form.project ? form.project : ''} onChange={handleChange} id="project"
+        required name="project" type="text" placeholder="Project" autoComplete="off"
+      />
+    </div>
+      <br />
+      <div className="form-input" >
       <label htmlFor="description">Description</label>
       <input
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
