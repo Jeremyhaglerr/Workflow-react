@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 
 // Components
 import IssueCard from '../../../components/Cards/IssueCard/IssueCard'
