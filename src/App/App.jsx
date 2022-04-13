@@ -5,6 +5,7 @@ import './App.css'
 //Components
 import Login from '../pages/Login/Login'
 import NavBar from '../components/NavBar/NavBar'
+import Landing from '../pages/Landing/Landing'
 import Profile from '../pages/Profile/Profile'
 import TaskList from '../pages/Lists/TaskList/TaskList'
 import TaskForm from '../pages/Forms/TaskForm/TaskForm'
@@ -63,13 +64,13 @@ const App = () => {
   const deleteTask = async (id) => {
     await taskService.deleteOne(id)
     setTasks(tasks.filter(task => task.id !== parseInt(id)))
-    navigate("/tasks")
+    navigate("/profile")
   }
 
   const deleteIssue = async (id) => {
     await issueService.deleteOne(id)
     setIssues(issues.filter(issue => issue.id !== parseInt(id)))
-    navigate('/issues')
+    navigate('/profile')
   }
 
   useEffect(() => {
@@ -94,6 +95,10 @@ const App = () => {
       <Routes>
       <Route
           path='/'
+          element={user ? <Landing user={user} /> : <Navigate to='/login'/>}
+        />
+      <Route
+          path='/profile'
           element={user ? <Profile user={user} tasks={tasks} issues={issues} handleLogout={handleLogout}  /> : <Navigate to='/login'/>}
         />
         <Route

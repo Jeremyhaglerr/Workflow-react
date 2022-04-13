@@ -1,10 +1,13 @@
-import styles from './Landing.module.css'
 
 const Landing = ({ user }) => {
   return (
-    <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+    <>
+    <img className="splash-logo" src="logo.png" alt="logo" />
+    <main>
+      <h1>Workflow</h1>
+      <p>Workflow seeks to assist in your personal and professional project tracking by providing a space to add tasks that need to be done and issues that have arisen within your projects.</p>
     </main>
+    </>
   )
 }
 
