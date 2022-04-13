@@ -15,7 +15,7 @@ const TaskForm = (props) => {
   const handleSubmit = async (evt) => {
     evt.preventDefault()
     id ? props.updateTask(form) : props.addTask(form)
-    navigate(`/`)
+    navigate(`/profile`)
   }
 
   const handleChange = (evt) => {
