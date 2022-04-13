@@ -4,11 +4,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.5px solid black;
-  padding: 10px 30px;
+  padding: 5px 30px;
   background-color: white;
 }
-
-
 
 .nav-logo {
   justify-self: left;
@@ -17,7 +15,17 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 25vw;
+  height: 100%;
+}
+
+.nav-links img {
+  width:64px;
+}
+
+.nav-links img:hover {
+  width:68px
 }
 
 a {
@@ -93,21 +101,24 @@ span {
   left: 180px;
 }
 
-.logout {
+.logout img {
   position: absolute;
+  width: 64px;
+  transition: width .2s;
 }
 
-.logout img, .add-btn img {
+.logout img:hover {
+  width: 72px
+}
+
+.add-btn img {
   padding: 5px;
-  background-color: white;
-  border-radius: 50%;
   width: 64px;
   transition: width .2s, background-color .4s;
 }
 
-.logout img:hover, .add-btn img:hover {
+.add-btn img:hover {
   width: 72px;
-  background-color: rgb(107,217,231);
 }
 
 .card {
