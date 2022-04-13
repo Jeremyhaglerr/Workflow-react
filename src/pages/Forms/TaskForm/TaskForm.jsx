@@ -38,18 +38,17 @@ const TaskForm = (props) => {
 
   return (
     <>
-      <div className="page-header">
-        {id
-          ? <h1>Edit Task</h1>
-          : <h1>Add Task</h1>
-        }
-      </div>
-
       <section className="form-container">
+        <div className="page-header">
+          {id
+            ? <h1>Edit Task</h1>
+            : <h1>Add Task</h1>
+          }
+        </div>
         <form onSubmit={handleSubmit}>
           <TaskInput form={form} handleChange={handleChange} />
           <br />
-          <button type="submit" className="btn submit">Submit!</button>
+          <button type="submit" className="btn">Submit</button>
         </form>
       </section>
     </>

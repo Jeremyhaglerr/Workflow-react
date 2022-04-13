@@ -1,47 +1,4 @@
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: rgb(28, 28, 220);
-}
-
-.page-header {
-  margin: 0 auto;
-  width: fit-content;
-  height: 80px;
-}
-
-.form-container {
-  width: 80vw;
-  height: 60vh;
-  padding: 20px;
-  margin: 0 auto;
-  border: .5px solid black;
-  border-radius: 15px;
-  background-color: white;
-}
-
-.form-input {
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.form-input label {
-  background-color: lightgrey;
-  border: .5px solid black;
-  min-width: 14vw;
-  height: 40px;
-  text-align: center;
-}
-
-.form-input input {
-  width: 50vw;
-  height: 40px
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -61,6 +18,55 @@ nav {
   width: 25vw;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(107,217,231);
+}
+
+.page-header {
+  margin: 0 auto;
+  width: fit-content;
+  height: 80px;
+}
+
+.form-container {
+  width: 60vw;
+  height: 60vh;
+  padding: 20px;
+  margin: 5% auto;
+  border: .5px solid black;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.form-input {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.form-input input {
+  width: 50vw;
+  height: 40px
+}
+
+.btn {
+  margin: 0 40%;
+  background-color: white;
+  width: 20%;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  transition: background-color .4s
+}
+
+.btn:hover {
+  background-color: rgb(107,217,231);
+}
+
 .add-btn {
   width: fit-content;
   position:relative ;
@@ -73,11 +79,12 @@ nav {
   background-color: white;
   border-radius: 50%;
   width: 64px;
-  transition: width .4s
+  transition: width .2s, background-color .4s;
 }
 
 .add-btn img:hover {
-  width: 72px
+  width: 72px;
+  background-color: rgb(107,217,231);
 }
 
 .card {
