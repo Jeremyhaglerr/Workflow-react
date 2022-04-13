@@ -24,7 +24,7 @@ const IssueDetails = (props) => {
         <div className="task-details">
           <h1>{issue.title}</h1>
           <p><span>Project: </span>{issue.project}</p>
-          <p><span>Error: </span>{issue.error}</p>
+          <p><span>Error: </span><code>{issue.error}</code></p>
           <p><span>Description: </span>{issue.description}</p>
           {issue.profile_id === props.user.id ?
           <>
