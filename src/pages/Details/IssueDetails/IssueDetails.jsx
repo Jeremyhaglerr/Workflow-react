@@ -29,6 +29,7 @@ const IssueDetails = (props) => {
           {issue.profile_id === props.user.id ?
           <>
           <Link to={`/issues/${issue.id}/edit`} ><button className='btn' >Edit</button></Link>
+          <br />
           <button className='btn delete' onClick={() => props.deleteIssue(issue.id)} >Delete</button>
           </>
           :

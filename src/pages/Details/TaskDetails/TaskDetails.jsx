@@ -28,6 +28,7 @@ const TaskDetails = (props) => {
           {task.profile_id === props.user.id ?
           <>
           <Link to={`/tasks/${task.id}/edit`} ><button className='btn' >Edit</button></Link>
+          <br />
           <button className='btn delete'  onClick={() => props.deleteTask(task.id)} >Delete</button>
           </>
           :

@@ -9,7 +9,7 @@ const TaskList = (props) => {
       <section className="page-header">
         <h1>Task List</h1>
         <div className='add-btn' >
-          <Link to='/tasks/new'><img src="add-btn.png" alt="add task" /></Link>
+          <Link to='/tasks/new'><img src="add-btn-2.png" alt="add task" /></Link>
         </div>
       </section>
       <section className="card-container">
