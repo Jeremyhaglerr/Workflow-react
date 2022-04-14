@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { getOne } from '../../../services/issueService'
 
 // Components
-import IssueInput from './IssueInput'
+import IssueInput from '../../../components/Inputs/IssueInput'
 
 const TaskForm = (props) => {
   const { id } = useParams()
