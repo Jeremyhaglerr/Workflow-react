@@ -91,15 +91,16 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} />
+    <NavBar user={user} handleLogout={handleLogout} />
+    <div className='content'>
       <Routes>
       <Route
           path='/'
-          element={user ? <Landing user={user} /> : <Navigate to='/login'/>}
+          element={<Landing user={user} />}
         />
       <Route
           path='/profile'
-          element={user ? <Profile user={user} tasks={tasks} issues={issues} handleLogout={handleLogout}  /> : <Navigate to='/login'/>}
+          element={user ? <Profile user={user} tasks={tasks} issues={issues} /> : <Navigate to='/login'/>}
         />
         <Route
           path="/signup"
@@ -142,7 +143,8 @@ const App = () => {
           element={user ? <IssueForm updateIssue={updateIssue} /> : <Navigate to="/login" />}
         />
       </Routes>
-    </>
+    </div>
+  </>
   )
 }
 

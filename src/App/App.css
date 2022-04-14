@@ -1,31 +1,40 @@
+/* -------navbar-------- */
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 0.5px solid black;
-  padding: 5px 30px;
-  background-color: white;
-}
-
-.nav-logo {
-  justify-self: left;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 25vw;
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  background-color: #f1f1f1;
+  position: fixed;
   height: 100%;
+  overflow: auto;
 }
 
-.nav-links img {
-  width:64px;
+ul.sidenav img {
+  width: 64px;
 }
 
-.nav-links img:hover {
-  width:68px
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+ul.sidenav span {
+  font-size: 1rem;
+}
+
+/* ----------general rules---------- */
+div.content {
+  padding: .1px 0;
+  height: 1000px;
 }
 
 a {
@@ -41,6 +50,7 @@ a:hover {
   margin: 0 auto;
   width: fit-content;
   height: 80px;
+  text-decoration: underline;
 }
 
 .container {
@@ -62,6 +72,8 @@ span {
   font-weight: 700;
 }
 
+/* -------------forms------------- */
+
 .form-input {
   margin: 0 auto;
   width: fit-content;
@@ -72,10 +84,12 @@ span {
   height: 40px
 }
 
+/* --------------buttons------------- */
+
 .btn {
-  margin: 0 40%;
+  margin: 0 auto;
   background-color: white;
-  width: 20%;
+  width: fit-content;
   height: 40px;
   border-radius: 15px;
   font-size: 1.6rem;
@@ -101,16 +115,6 @@ span {
   left: 180px;
 }
 
-.logout img {
-  position: absolute;
-  width: 64px;
-  transition: width .2s;
-}
-
-.logout img:hover {
-  width: 72px
-}
-
 .add-btn img {
   padding: 5px;
   width: 64px;
@@ -121,14 +125,15 @@ span {
   width: 72px;
 }
 
+/* ---------------cards-------------- */
+
 .card {
   background-color: white;
   border-radius: 15px;
-  width: 40vw;
+  width: 50vw;
   padding: 15px;
   margin: 15px auto;
   text-align: center;
- 
   transition: padding .4s;
 }
 
@@ -136,10 +141,12 @@ span {
   padding: 30px;
 }
 
+/* ---------------landing page----------- */
+
 .splash-logo {
   background-color: white;
-  width: 40vw;
-  margin:5vh 30vw;
+  width: 20vw;
+  margin:5vh 40vw;
   padding: 5px;
   border-radius: 15px;
   text-align: center;
@@ -151,6 +158,48 @@ main {
   background-color: white;
   padding: 15px;
   border-radius: 15px;
-  max-width: 80vw;
+  max-width: 60vw;
+
+}
+
+/* ---------------login/signup----------- */
+
+
+
+/* --------------media queries------------- */
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
   
+  ul.sidenav li a {
+    float: left;
+    padding: 15px 4%;
+  }
+
+  ul.sidenav img {
+    width: 48px;
+  }
+
+  ul.sidenav span {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  ul.sidenav li a {
+    float: left;
+    padding: 5px 4%;
+  }
+  
+  ul.sidenav img {
+    width: 40px;
+  }
+
+  ul.sidenav span {
+  display: none;
+  }
 }
