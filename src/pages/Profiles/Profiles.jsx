@@ -26,3 +26,6 @@ const Profiles = () => {
 }
  
 export default Profiles
+
+
+// FILE TO BE IMPLEMENTED IN FURTHER UPDATES

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 
 const SignupForm = props => {
@@ -41,10 +40,8 @@ const SignupForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+     <div className="form-input" >
         <input
           type="text"
           autoComplete="off"
@@ -52,10 +49,11 @@ const SignupForm = props => {
           value={name}
           name="name"
           onChange={handleChange}
+          placeholder="Please Enter Your Name"
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+        </div>
+        <br />
+        <div className="form-input" >
         <input
           type="text"
           autoComplete="off"
@@ -63,10 +61,11 @@ const SignupForm = props => {
           value={email}
           name="email"
           onChange={handleChange}
+          placeholder="Please Enter Your Email"
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+        </div>
+        <br />
+        <div className="form-input" >
         <input
           type="password"
           autoComplete="off"
@@ -74,12 +73,11 @@ const SignupForm = props => {
           value={password}
           name="password"
           onChange={handleChange}
+          placeholder="Please Enter Your Password"
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
-          Confirm Password
-        </label>
+        </div>
+        <br />
+        <div className="form-input" >
         <input
           type="password"
           autoComplete="off"
@@ -87,16 +85,17 @@ const SignupForm = props => {
           value={passwordConf}
           name="passwordConf"
           onChange={handleChange}
+          placeholder="Please Confirm Your Password"
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+        </div>
+        <br />
+        <button className='btn' disabled={isFormInvalid()}>
           Sign Up
         </button>
+        <br />
         <Link to="/">
-          <button>Cancel</button>
+          <button className='btn delete' >Cancel</button>
         </Link>
-      </div>
     </form>
   )
 }
