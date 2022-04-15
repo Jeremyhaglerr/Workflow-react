@@ -10,3 +10,5 @@ async function getAllProfiles() {
 }
 
 export { getAllProfiles }
+
+//TO BE IMPLEMENTED IN FUTURE UPDATES
