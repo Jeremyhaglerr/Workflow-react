@@ -1,9 +1,13 @@
- # [WorkFlow](https://workflow-react-jh.netlify.app/)
+ # WorkFlow
+
+
+
+[Deployed Application](https://workflow-react-jh.netlify.app/)
 
  [Backend repository](https://github.com/Jeremyhaglerr/ticket-flow-api)
 
 ### Description
-WorkFlow seeks to help users track their current tasks and issues in projects they are working on and share them with others. This application was made originally for my own use to track daily tasks in personal projects in my own time, but I hope it will assist others in organizing their projects too.
+WorkFlow seeks to help users track their current tasks and issues in projects they are working on and share them with others. This application was made originally for my own use to track daily tasks in personal project, but I hope it will assist others in organizing their projects too.
 
 ---
 ### Screen Shots
